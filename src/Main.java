@@ -2,20 +2,27 @@
 
 public class Main {
 
-    // Main method - entry point of the Java application
     public static void main(String[] args) {
 
-        // Display welcome message
-        System.out.println("====================================");
-        System.out.println("      Welcome to PalindromeChecker App");
-        System.out.println("====================================");
+        // Hardcoded string
+        String word = "madam";
 
-        // Display application information
-        System.out.println("Application Name : Palindrome Checker");
-        System.out.println("Application Version : 1.0");
+        // Variable to store reversed string
+        String reversed = "";
 
-        // Inform about program flow
-        System.out.println("\nThe application is ready to check palindromes.");
-        System.out.println("Proceeding to the next step...");
+        // Reverse the string
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check if the string is a palindrome
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+
+        // Program ends
+        System.out.println("Program execution completed.");
     }
 }
